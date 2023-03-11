@@ -1,27 +1,21 @@
 {
-  "name": "landing-page-v0.1",
+  "name": "roomy-server",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm run dev --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client &&  npx browserslist@latest --update-db && npm run build --prefix client && npm run export --prefix client"
+    "dev": "nodemon server.js"
   },
-  "author": "praX03",
-  "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "concurrently": "^6.2.0",
-    "cookie-parser": "^1.4.5",
+    "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.14",
-    "next": "^11.0.1"
-  }
+    "mongoose": "^5.13.16",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
