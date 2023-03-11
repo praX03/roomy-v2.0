@@ -5,6 +5,7 @@ import LogoDark from "assets/logo.png";
 import { useRef, useState, useEffect } from "react";
 import { jsx } from "theme-ui";
 import { useRouter } from "next/router";
+import Register from "./register";
 import {
 	Container,
 	Flex,
@@ -20,12 +21,12 @@ import TextFeature from "components/text-feature";
 import UserPic from "../assets/team/member-1.png";
 import User2Pic from "../assets/team/member-2.png";
 
-export default function User() {
+export default function User(props) {
 	const router = useRouter();
 	const [userData, setUserData] = useState({});
 	const callUserPage = async () => {
 		try {
-			const res = await fetch("/user-dashboard", {
+			const res = await fetch("/sections/user-dashboard", {
 				method: "GET",
 				headers: {
 					Accept: "application/json",
@@ -43,7 +44,9 @@ export default function User() {
 			}
 		} catch (err) {
 			console.log(err);
-			router.push("/login");
+			// router.push("/login");
+			// router.push("/user-dashboard");
+			// res.send("mui");
 		}
 	};
 
